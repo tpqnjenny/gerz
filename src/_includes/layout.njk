@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#202223">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="{{ '/css/reset.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script defer src="{{ '/js/common.js' | url }}"></script>
+    <script defer src="{{ '/js/index.js' | url }}"></script>
+  </head>
+  <body>
+    {% include "header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="{{ '/#home' | url }}" aria-label="GERZ KOREA 홈">
+        <img src="{{ '/img/logo_261122.png' | url }}" alt="">
+      </a>
+      <p>생맥주 장비의 기준, 게르츠 코리아</p>
+      <span>© <span id="current-year"></span> GERZ KOREA. ALL RIGHTS RESERVED.</span>
+    </footer>
+  </body>
+</html>
